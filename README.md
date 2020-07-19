@@ -10,7 +10,7 @@ In this assignment, we consider a tiny computing system that supports up to 1KB 
 Part 1: 30 points
 This component will simply get you started. Assume that the page table of the process is like the following picture.
 
-# Refer pagetable.img
+# Refer pagetable.png
 
 
 Note that only a few entries of the process' page table are listed, as we will only use the first seven entries in Part 1.
