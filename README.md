@@ -15,7 +15,7 @@ This component will simply get you started. Assume that the page table of the pr
 
 Note that only a few entries of the process' page table are listed, as we will only use the first seven entries in Part 1.
 
- # Write a program called mempart1.c for this part. The program will take only one parameter, the input sequence filename, which contains a sequence of virtual/logic memory accesses. Here, each address is stored as 8 bytes (unsigned long type). Your program should read and analyze each logical/virtual address, and translate it into the corresponding physical address based on the given page table, as shown in the above picture. Note: to simplify it, you can place the fixed page-to-frame mapping (as shown in the figure) into an array, before performing any address translation.
+ Write a program called mempart1.c for this part. The program will take only one parameter, the input sequence filename, which contains a sequence of virtual/logic memory accesses. Here, each address is stored as 8 bytes (unsigned long type). Your program should read and analyze each logical/virtual address, and translate it into the corresponding physical address based on the given page table, as shown in the above picture. Note: to simplify it, you can place the fixed page-to-frame mapping (as shown in the figure) into an array, before performing any address translation.
 
 Each memory address is saved in a binary format. To verify that you can read the correct sequence of memory accesses, you can first print the address that you have analyzed. You can test your program with the given simple test sequence file (part1testsequence), where the first address should be 0x00000044, and the second one should be 0x00000224. Physical addresses for these two addresses (after the translation) should be 0x144 and 0x01A4.
 
@@ -26,7 +26,7 @@ Once you test your program correctly with the above simple test sequence, which 
 
 Part 2: 40 points
 
-# In this part, you will design the page table and handle deal with allocations of physical machiens on the same machine as discussed above. You will create two new source files in this part: phyframes.c and pagetable.c, as well as a new main program, named mempart2.c, plus any necessary header files. Here, phyframes.c is used to manage the physical frames, while pagetable.c will hold all functions that manages the page table for the process.
+In this part, you will design the page table and handle deal with allocations of physical machiens on the same machine as discussed above. You will create two new source files in this part: phyframes.c and pagetable.c, as well as a new main program, named mempart2.c, plus any necessary header files. Here, phyframes.c is used to manage the physical frames, while pagetable.c will hold all functions that manages the page table for the process.
 
 For this part, we will also assume the first physical frame is reserved for the OS, while other framess are initially available for the process. To manage physical frames, you will use a simple physical page allocation scheme:
 You will allocate each physical page in the order of frame number initially, starting from 1, 2, 3, .... If physical frames are available, you will always allocate from these available frames at first.
