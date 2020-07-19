@@ -1,0 +1,6 @@
+~~~~~~~
+Result:
+~~~~~~~
+pagefault 3210
+% md5sum part2output
+c95b27848ae8d4354d87678d075001f7  part2output
